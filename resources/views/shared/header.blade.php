@@ -11,7 +11,7 @@
     {{-- @dump ( Request::route()->getName() ) --}}
     <header class="main-header">
         <nav class="navbar">
-            <a href="{{ route('static-page.home') }}" class="navbar-brand">Boolean</a>
+            <a href="{{ route('static-page.home') }}" class="navbar-brand"><img src="https://www.boolean.careers/images/common/logo.png" alt="Boolean Careers"></a>
             <ul>
                 <li><a @if ( Request::route()->getName() == 'static-page.home') class="active" @endif
                      href="{{ route('static-page.home') }}">Home</a></li>

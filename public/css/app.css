@@ -5,6 +5,8 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   font-family: sans-serif;
   font-size: 16px;
 }
@@ -24,8 +26,15 @@ p {
 
 .main-content {
   max-width: 1140px;
+  min-height: 80vh;
   margin: 0 auto;
   padding: 0 1rem 4rem;
+}
+
+.main-content .jumbo {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
 }
 
 .navbar {
@@ -38,6 +47,10 @@ p {
 .navbar .navbar-brand {
   text-transform: uppercase;
   color: blue;
+}
+
+.navbar img {
+  width: 39%;
 }
 
 .navbar ul {
@@ -104,7 +117,7 @@ p {
   margin-bottom: 2rem;
   padding: 1rem;
   color: #333;
-  background: #999;
+  background: #E8EBF1;
   transition: transform 0.3s;
 }
 
