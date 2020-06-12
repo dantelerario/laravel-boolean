@@ -1,10 +1,11 @@
 <?php
 
 return [
-    [
+    'students' => [
         'id' => 1,
         'img' => 'https://www.boolean.careers/images/students/biagini.png',
         'nome' => 'Alessandro Biagini',
+        'slug' => 'alessandro-biagini',
         'eta' => '25',
         'genere' => 'm',
         'azienda' => 'DISC SPA',
@@ -15,6 +16,7 @@ return [
         'id' => 2,
         'img' => 'https://www.boolean.careers/images/students/poggini.png',
         'nome' => 'Paola Poggini',
+        'slug' => 'paola-poggini',
         'eta' => '24',
         'genere' => 'f',
         'azienda' => 'DISC SPA',
@@ -27,6 +29,7 @@ return [
         'id' => 3,
         'img' => 'https://www.boolean.careers/images/students/masetti.png',
         'nome' => 'Loana Masetti',
+        'slug' => 'loana-masetti',
         'eta' => '36',
         'genere' => 'f',
         'azienda' => 'The Zen Agency',
@@ -37,6 +40,7 @@ return [
         'id' => 4,
         'img' => 'https://www.boolean.careers/images/students/patruno.png',
         'nome' => 'Davide Patruno',
+        'slug' => 'davide-patruno',
         'eta' => '29',
         'genere' => 'm',
         'azienda' => 'ArmadioVerde',
@@ -47,6 +51,7 @@ return [
         'id' => 5,
         'img' => 'https://www.boolean.careers/images/students/castellani.png',
         'nome' => 'Tommaso Castellani',
+        'slug' => 'tommaso-castellani',
         'eta' => '30',
         'genere' => 'm',
         'azienda' => 'Pearch Digital',
@@ -57,10 +62,16 @@ return [
         'id' => 6,
         'img' => 'https://www.boolean.careers/images/students/antidormi.png',
         'nome' => 'Nicholas Antidormi',
+        'slug' => 'nicholas-antidormi',
         'eta' => '20',
         'genere' => 'm',
         'azienda' => 'Atoms Studio',
         'ruolo' => 'web dev',
         'descrizione' => 'Intraprende gli studi universitari in matematica per le sue doti analitiche, ma abbandona il percorso per concentrarsi su uno più pratico e orientato alla richiesta del mercato del lavoro: la programmazione.',
+    ],
+    'genders' => [
+        'all',
+        'm',
+        'f',
     ],
 ];

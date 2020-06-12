@@ -8,3 +8,7 @@
         </ul>
     </nav>
 </footer>
+
+{{-- jS --}}
+
+<script src="{{ asset('js/app.js')}}"></script>

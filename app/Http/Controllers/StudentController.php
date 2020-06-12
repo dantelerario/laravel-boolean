@@ -7,26 +7,26 @@ use Illuminate\Http\Request;
 class StudentController extends Controller
 {
     private $students;
+    private $genders;
 
     public function __construct() {
-        $this->students = config('students');
+        $this->students = config('students.students');
+        $this->genders = config('students.genders');
     }
     //homepage
     public function index(){
 
+        $data = [
+            'students' => $this->students,
+            'genders' => $this->genders,
+        ];
 
-        $students = $this->students;
-
-        // dd(config('students'));
-
-
-
-        return view('students.index', compact('students'));
+        return view('students.index', $data);
     }
     //homepage
-    public function show($id){
+    public function show($slug){
         
-        $student = $this->searchStudent($id, $this->students);
+        $student = $this->searchStudent($slug, $this->students);
         if(! $student) {
             abort('404');
         }
@@ -39,9 +39,9 @@ class StudentController extends Controller
 
      //check if students id exists
 
-     private function searchStudent($id, $array) {
+     private function searchStudent($slug, $array) {
         foreach ($array as $student) {
-            if ($student['id'] == $id) {
+            if ($student['slug'] == $slug) {
                 return $student;
             }
         }
