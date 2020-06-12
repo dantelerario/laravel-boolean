@@ -34,6 +34,7 @@
 
 @endsection
 
-{{-- @section('scripts')
-
-@endsection --}}
+@section('scripts')
+    {{-- JS  --}}
+    <script src="{{ asset('js/app.js')}}"></script>
+@endsection
