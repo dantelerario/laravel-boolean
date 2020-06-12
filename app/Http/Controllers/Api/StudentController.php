@@ -14,8 +14,6 @@ class StudentController extends Controller
         $students = config('students.students');
         $genders = config('students.genders');
 
-        //$data = $request->all();
-
         $gender = $request->input('filter');
 
         $result = [
@@ -28,7 +26,7 @@ class StudentController extends Controller
                 $result['response'] = $students;
             } else {
                 foreach($students as $student) {
-                    if($student['genere'] == $gender) {
+                    if ($student['genere'] == $gender) {
                         $result['response'][] = $student;
                     }
                 }
@@ -36,7 +34,6 @@ class StudentController extends Controller
         } else {
             $result['error'] = 'filter not allowed';
         }
-
         return response()->json($result);
     }
 }
